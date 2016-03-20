@@ -1,0 +1,14 @@
+caption { 
+padding: 0 0 5px 0; 
+width: 450px; 
+font: italic 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+text-align: right; 
+} 
+td { 
+border:1px solid #c1dad7; 
+
+padding: 6px 6px 6px 12px; 
+color: #4f6b72; 
+text-align: center; 
+width:150px; 
+} 

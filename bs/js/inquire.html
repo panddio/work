@@ -1,0 +1,100 @@
+<html>
+	<head><title>inquire</title></head>
+	<!-- 需要链接哪个js脚本文件 -->
+	<script type="text/javascript" src="_form.js"></script>
+	
+	<body bgcolor="#E6E6FA">
+	<center>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+		<table border=1 width=20% bgcolor="#91D77D">		
+			<form name="注册卡号员工信息" action="test2.cgi">
+				
+			<tr>
+				<td align="center" colspan=2>注册卡员工信息</td>
+			</tr>
+			
+			<tr>
+				<td align="center" colspan=2>姓名:<input name="user" type="text"></td>					
+			</tr>
+					
+			<tr>
+				<td align="center" colspan=2>工号:<input name="num" type="text"></td>
+			</tr>
+			
+			<tr>
+				<td align="center" colspan=2>
+				&nbsp;男:<input name="sex" type="radio" value="female">
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;女:<input name="sex" type="radio" value="male">
+				</td>
+			</tr>
+			
+			<tr>
+				<td align="center">
+					<input type="button" value="注册">											
+				</td>
+				<td align="center">
+					<input type="reset" value="清空">											
+				</td>				
+			</tr>				
+			</form>		
+							
+		</table>
+		
+		<br>
+		<br>
+		<br>
+		
+		<table border=1 width=20%>		
+			<form action="test3.cgi">
+				
+			<tr>
+				<td align="center" colspan=2>注销卡号</td>
+			</tr>
+			
+			<tr>
+				<td align="center" colspan=2>卡号:<input name="num" type="text" </td>
+			</tr>
+			
+			<tr>
+				<td align="center">
+					<input type="button" value="注销">											
+				</td>
+				<td align="center">
+					<input type="reset" value="清空">											
+				</td>					
+			</tr>	
+			</form>								
+		</table>
+		
+		<br>
+		<br>
+		<br>
+		<table width=20%>
+			<form action="test4.cgi">
+			<tr>
+				<select>
+					<option value="姓名">姓名</option>					
+					<option value="卡号">卡号</option>					
+					<option value="工号">工号</option>
+				</select>
+				<input name="info" type="text">
+				<input type="button" value="查询">
+			</tr>	
+			</form>
+		</table>
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<input type="button" value="退出登录" onclick="window_login_exit()">
+	</body>
+</html>

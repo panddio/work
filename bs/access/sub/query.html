@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>查询信息</title>
+	<link rel="stylesheet" href="style/query.css" />
+	<script type="text/javascript" src="js/deal.js"></script>
+	
+	<style type="text/css">
+    .ball{color:#FF0000; position:absolute; font-size:16px;}
+    .star{color:#FF0000; position:absolute; font-size:4px;}
+	</style>
+
+</head>
+<body>
+	<br>
+	<br>
+	<br>
+	<div class="lg-container">
+		<h1>查询</h1>
+		<form id="lg-form" name="lg-form" method="post">
+					
+			<div>
+				<table width=275px>
+					<tr>
+						<td align="right">
+							<select id="querysel" onchange="placeholderChange('querysel','query')">
+								<option value="姓名" id="name" selected="selected">姓名</option>					
+								<option value="卡号" id="cardid">卡号</option>								
+							</select>
+						</td>
+						<td>
+							<input type="text" name="query" id="query" placeholder="name"/>
+						</td>
+						<td align="center">
+							<button type="button" id="querybutton" onclick="buttons_callback(3);return false;">查询</button>
+						</td>
+					</tr>				
+				</table>
+				
+			</div>		
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <title>打卡系统</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <!-- **** layout stylesheet **** -->
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <link rel="stylesheet" type="text/css" href="style/query.css" />
+  
+  <!-- **** colour scheme stylesheet **** -->
+  <link rel="stylesheet" type="text/css" href="style/colour.css" />
+  <script type="text/javascript" src="js/effects.js"></script>
+  <script type="text/javascript" src="js/deal.js"></script>
+</head>
+
+<body>
+  <bgsound src="sub/music/Beyond Hope.mp3" autostart="true" loop="true">
+  <div id="main">
+    <div id="links">
+      <!-- **** INSERT LINKS HERE **** -->
+      <a href="#">another link</a> | <a href="contact.html">联系我们</a>
+    </div>
+    <div id="logo"><h1>ORANGE_SCIENCE</h1></div>
+    <div id="content">
+      <div id="menu">
+        <ul>	
+	      <li><a href="index.html">HOME</a></li>
+          <li><a href="page1.html">产品展示</a></li>
+          <li><a href="page2.html">关于我们</a></li>
+          <li><a href="page3.html">招纳贤才</a></li>
+          <li><a id="selected" href="root_login.html">打卡系统</a></li>	  
+        </ul>
+      </div>
+      <div id="column1">
+        <div class="sidebaritem">
+          <div class="sbihead">
+            <h1>最新资讯</h1>
+          </div>
+          <div class="sbicontent">
+            <!-- **** INSERT NEWS ITEMS HERE **** -->
+            <h2>28.09.2015</h2>
+             <div id="oTransContainer">
+               <img src="img/1.jpg" width=180 height=130 border=0 id=oDIV1>
+               <img src="img/2.jpg" width=180 height=130 border=0 id=oDIV2 style="DISPLAY: none;">
+               <img src="img/3.jpg" width=180 height=130 border=0 id=oDIV3 style="DISPLAY: none;">
+               <img src="img/4.jpg" width=180 height=130 border=0 id=oDIV4 style="DISPLAY: none;">
+            </div>              
+            <p>This is where you can put your latest news.</p>
+            <p><a href="#">更多 ...</a></p>
+          </div>
+        </div>
+        <div class="sidebaritem">
+          <div class="sbihead">
+            <h1>打卡系统</h1>
+          </div>
+          <div class="sbilinks">
+            <!-- **** INSERT ADDITIONAL LINKS HERE **** -->
+            <ul>
+              <li><a href="register.html"> 新卡注册</a></li>
+              <li><a href="logout.html" >旧卡注销</a></li>
+              <li><a id="sbilink_selected" href="query.html"  >查询信息</a></li>
+              <li><a href="update.html" >更新信息</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="sidebaritem">
+          <div class="sbihead">
+            <h1>other information</h1>
+          </div>
+          <div class="sbicontent">
+            <!-- **** INSERT OTHER INFORMATION HERE **** -->
+            <p>
+              This space can be used for additional information such as a contact phone number, address
+              or maybe even a graphic.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="column2">
+        <h1>查询信息</h1>
+        <!-- **** INSERT PAGE CONTENT HERE **** -->
+        <br />
+        <table width="510" height="500" border="0">
+          <tr>
+            <td>&nbsp;</td>  
+                   
+            <td colspan="18" rowspan="8" align="center" valign="middle" cellpadding="0" cellspacing="0" id="window">
+			<div class="lg-container">
+				<h2>查询</h2>
+				<form id="lg-form" name="lg-form">
+							
+					<div>
+						<table width=275px>
+							<tr>
+								<td align="right">
+									<select id="querysel" onchange="placeholderChange('querysel','query')">
+										<option value="姓名" id="name" selected="selected">姓名</option>											
+										<option value="卡号" id="cardid">卡号</option>	
+										<option value="工号" id="agentID">工号</option>		
+									    <option value="全部" id="all">全部</option>																								
+									</select>
+								</td>
+								<td>
+									<input type="text" name="query" id="query" placeholder="name"/>
+								</td>
+								<td align="center">
+									<button type="button" id="querybutton" onclick="buttons_callback(3);return false;">查询</button>
+								</td>
+							</tr>				
+						</table>
+						
+					</div>		
+				</form>
+			</div>
+            </td>
+            
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+		<div id="dynamic">
+		
+		</div>
+      </div>
+    </div>
+    <div id="footer">
+      copyright &copy; 2006 your name | <a href="#">email@emailaddress</a> | <a href="#">XHTML 1.1</a> | <a href="#">CSS</a> | <a href="#">design by dcarter</a>
+    </div>
+  </div>
+</body>
+</html>

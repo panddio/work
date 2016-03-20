@@ -1,0 +1,17 @@
+DIR_OBJ := ./obj
+SRC := $(shell ls *.c)
+#OBJ := $(patsubst %.c,%.o,$(SRC))
+OBJ := $(SRC:%.c=${DIR_OBJ}/%.o)
+TAG = elf
+CC := gcc
+CFLAGS = `pkg-config --cflags --libs gtk+-2.0 gmodule-export-2.0`
+
+$(TAG):$(OBJ)
+	$(CC) -o $@ $^ $(CFLAGS)
+$(DIR_OBJ)/%.o:%.c
+	$(CC) -o $@ -c $< $(CFLAGS)
+
+
+.PHONY:clean
+clean:
+	rm -f $(TAG) $(DIR_OBJ)/*.o *~

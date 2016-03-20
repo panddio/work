@@ -1,0 +1,6 @@
+#!/bin/sh
+
+s=(ME [3]=CA [2]=NT)
+echo ${s[*]}
+echo ${s[3]}
+echo "hello shell"

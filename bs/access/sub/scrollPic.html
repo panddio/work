@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <title>图片滚动</title>
+    <style>
+    *{margin:0;padding:0;}
+    ul{list-style:none;}
+    img{border:0;}
+    .scroll{width:358px;height:63px;}
+    .scroll_left{width:23px;height:63px;background:url(images/btn_left.jpg) no-repeat;float:left;}
+    .scroll_right{width:23px;height:63px;background:url(images/btn_right.jpg) left no-repeat;float:left;}
+    .pic{width:312px;height:73px;float:left;}
+    .pic ul{display:block;}
+    .pic li{float:left;display:inline;width:104px;text-align:center;}
+    </style>
+</head>
+<body>
+<div style="margin:100px auto;width:358px;">
+    <div class="scroll">
+        <div class="scroll_left" id="LeftArr"></div>
+        <div class="pic" id="scrollPic">
+        <ul>
+            <li><a href="#" target="_blank" title=""><img src="photos/1.jpg" width="100" height="63" alt="" /></a></li>
+            <li><a href="#" target="_blank" title=""><img src="photos/2.jpg" width="100" height="63" alt="" /></a></li>
+            <li><a href="#" target="_blank" title=""><img src="photos/3.jpg" width="100" height="63" alt="" /></a></li>
+            <li><a href="#" target="_blank" title=""><img src="photos/4.jpg" width="100" height="63" alt="" /></a></li>
+            <li><a href="#" target="_blank" title=""><img src="photos/5.jpg" width="100" height="63" alt="" /></a></li>
+            <li><a href="#" target="_blank" title=""><img src="photos/6.jpg" width="100" height="63" alt="" /></a></li>
+        </ul>
+        </div>
+        <div class="scroll_right" id="RightArr"></div>
+    </div>
+</div>
+</body>
+</html>
+<script src="scrollPic.js"></script>
+<script>
+window.onload = function(){
+    scrollPic();
+}
+function scrollPic() {
+    var scrollPic = new ScrollPic();
+    scrollPic.scrollContId   = "scrollPic"; //内容容器ID
+    scrollPic.arrLeftId      = "LeftArr";//左箭头ID
+    scrollPic.arrRightId     = "RightArr"; //右箭头ID
+
+    scrollPic.frameWidth     = 312;//显示框宽度
+    scrollPic.pageWidth      = 104; //翻页宽度
+
+    scrollPic.speed          = 10; //移动速度(单位毫秒，越小越快)
+    scrollPic.space          = 10; //每次移动像素(单位px，越大越快)
+    scrollPic.autoPlay       = true; //自动播放
+    scrollPic.autoPlayTime   = 2; //自动播放间隔时间(秒)
+
+    scrollPic.initialize(); //初始化
+}
+</script>

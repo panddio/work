@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>更新信息</title>
+	<link rel="stylesheet" href="style/update.css" />
+	<script type="text/javascript" src="js/deal.js"></script>
+
+	<style type="text/css">
+    .ball{color:#FF0000; position:absolute; font-size:16px;}
+    .star{color:#FF0000; position:absolute; font-size:4px;}
+	</style>
+
+</head>
+<body>
+	<br>
+	<br>
+	<div class="lg-container">
+		<h1>更新</h1>
+		<form id="lg-form" name="lg-form" method="post">
+					
+			<div>
+				<table width="275px" cellspacing="15">
+					<tr>
+						<td align="right" class="lg-text">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名:</td>
+						<td>
+							<input type="text" name="username" id="username" placeholder="username"/>
+						</td>
+					</tr>
+					<tr>
+						<td align="right">
+							<select id="updsel" onchange="placeholderChange('updsel','update')">
+								<option value="名字" id="name" selected="selected">名字</option>
+								<option value="性别" id="sex">性别</option>
+								<option value="工号" id="agentID">工号</option>
+								<option value="卡号" id="cardid">卡号</option>								
+							</select>
+						</td>
+						<td>
+							<input type="text" name="update" id="update" placeholder="name"/>
+						</td>
+					</tr>					
+				</table>
+				
+				<br>
+				<table width="275px">
+					<tr>
+					  <td align="center"><button type="button" id="updbut" onclick="buttons_callback(4);return false;">Update</button></td>
+					  <td align="center"><button type="reset" id="reset">Reset</button></td>
+					</tr>
+				</table>					
+			</div>
+			
+		</form>
+	</div>
+</body>
+</html>
